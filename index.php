@@ -14,17 +14,17 @@
 <body>
     <div class="container">
         <div class="text-center mt-5">
-            <h1>HOTELS</h1>
+            <h1 class="display-4 fw-bold text-primary mb-5">HOTELS</h1>
         </div>
 
         <!-- aggiungo il form per i filtri -->
-        <form action="index.php" method="get" class="form-inline">
+        <form action="index.php" method="get" class="d-flex justify-content-center mb-3">
             <label for="parking">Parcheggio:</label>
-            <input type="checkbox" name="parking" id="parking" class="form-check-input">
+            <input type="checkbox" name="parking" id="parking" class="form-check-input me-3">
             <br>
             <!-- filtro per voto -->
-           <label for="vote">Voto minimo:</label>
-                <select name="vote" id="vote" class="form-control">
+           <label for="vote" class="me-2">Voto minimo:</label>
+                <select name="vote" id="vote" class="form-select w-25">
                 <option value="">Tutti</option>
                 <option value="1">1</option>
                 <option value="2">2</option>
@@ -34,12 +34,12 @@
             </select>
 
             <br>
-            <button type="submit" class="btn btn-primary">Filtra</button>
+            <button type="submit" class="btn btn-primary ms-3">Filtra</button>
         </form>
 
 
         <!-- stampo in una tabella -->
-        <table class="table table-striped table-bordered mt-3">
+        <table class="table table-striped table-bordered mt-5">
             <tr>
                 <th>Nome</th>
                 <th>Descrizione</th>
