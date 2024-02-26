@@ -41,3 +41,20 @@
 
     ];
 
+
+    // Filtro per parcheggio
+    if (isset($_GET['parking']) && $_GET['parking'] === 'on') {
+    $hotels = array_filter($hotels, function($hotel) {
+        return $hotel['parking'];
+    });
+    }
+
+    // Filtro per voto
+    if (isset($_GET['vote']) && is_numeric($_GET['vote'])) {
+    $vote = (int) $_GET['vote'];
+    $hotels = array_filter($hotels, function($hotel) use ($vote) {
+        return $hotel['vote'] >= $vote;
+    });
+    }
+
+?>
